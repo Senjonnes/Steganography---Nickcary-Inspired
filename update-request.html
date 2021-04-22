@@ -6,857 +6,142 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Portal</title>
+    <title>Stega</title>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
-
-        body {
-            Margin: 0;
-            padding: 0;
-            background-color: #f6f9fc;
+        #textCanvas {
+        display:none;
         }
 
-        table {
-            border-spacing: 0;
+        .wrap {
+        padding:30px;
         }
 
-        td {
-            padding: 0;
-        }
-
-        img {
-            border: 0;
-        }
-
-        .wrapper {
-            width: 100%;
-            table-layout: fixed;
-            background-color: #e7e7e7;
-            padding-bottom: 64px;
-            padding-top: 64px;
-            /* padding-bottom: 20px; */
-        }
-
-        .webkit {
-            max-width: 800px;
-            background: #ffffff;
-            background: -moz-linear-gradient(top,  hsl(0,0%,100%) 0%, hsl(0,0%,100%) 100%);
-            background: -webkit-linear-gradient(top,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-            background: linear-gradient(to bottom,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-            padding: 0px 24px 0px;
-        }
-
-        .outer {
-            Margin: 0 auto;
-            width: 100%;
-            max-width: 700px;
-            border-spacing: 0;
-            font-family: 'Century Gothic', 'Futura', 'Didact Gothic', san-serif;
-            color: #4a4a4a;
-            background: #ffffff;
-            background: -moz-linear-gradient(top,  hsl(0,0%,100%) 0%, hsl(0,0%,100%) 100%);
-            background: -webkit-linear-gradient(top,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-            background: linear-gradient(to bottom,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-        }
-
-        #normal-text {
-            font-size: 16px;
-        }
-
-        #big-text {
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        #big-text-2 {
-            font-size: 20px;
-            font-weight: 700;
-            padding-top: 14px
-        }
-
-        #big-text-3 {
-            font-size: 32px;
-            font-weight: 700;
-            padding-top: 14px
-        }
-
-        #big-text-4 {
-            font-size: 24px;
-            font-weight: 700;
-            padding-top: 14px
-        }
-
-        #brand-image {
-            padding: 0px;
-        }
-
-        #brand-image img {
-            height: 42px;
-        }
-
-        .container {
-            margin: auto;
-            overflow: hidden;
-            font-size: 18px;
-            padding: 28px;
-        }
-
-        .container__ {
-            text-align: center;
-            margin: auto;
-            overflow: hidden;
-            font-size: 18px;
-            padding: 0px 0px 28px 0px;
-            background: #ffffff;
-            background: -moz-linear-gradient(top,  hsl(0,0%,100%) 0%, hsl(0,0%,100%) 100%);
-            background: -webkit-linear-gradient(top,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-            background: linear-gradient(to bottom,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-        }
-
-        .container__ img {
-            height: 12px;
-        }
-
-        .brand {
-            min-height: 80px;
-            border-spacing: 0;
-            margin-bottom: 12px;
-            margin-top: 12px;
-        }
-
-        .header {
-            min-height: 100px;
-            border-spacing: 0;
-            border-radius: 24px;
-            margin-top: 12px;
-            background: #ebebeb;
-        }
-
-        .header2 {
-            min-height: 100px;
-            border-spacing: 0;
-            margin-bottom: 12px!important;
-            border-radius: 24px;
-            margin-top: 12px;
-            background: #ebebeb;
-        }
-
-        .text-red {
-            color: #ff0000;
-        }
-
-        .text-green {
-            color: #1acc03;
-        }
-
-        .text-dark {
-            color: #000000!important
-        }
-
-        .padding_ {
-            padding-top: 20px;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 14px 36px;
-            display: inline-block;
-            border-radius: 42px;
-            transition: all .2s;
-            margin-top: 32px;
-            background-color: #1acc03;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .header img,
-            #orientation img {
-                height: 32px !important;
-            }
-            
-            #orientation img{
-                height: 16px !important;
-            }
-
-            #brand-image img {
-                height: 24px;
-            }
-
-            .date_ {
-                font-size: 12px!important;
-            }
-            
-            .container {
-                font-size: 16px!important;
-                padding: 12px 24px;
-            }
-
-            .footer {
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-
-            .footer p {
-                font-size: 6px!important;
-            }
-
-            .website {
-                font-size: 12px;
-            }
-
-            footer h4 {
-                font-size: 9px !important;
-            }
-
-            .btn {
-                font-size: 12px;
-            }
-
-            #big-text {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-2 {
-                font-size: 14px;
-                font-weight: 700;
-            }
-
-            #big-text-3 {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-4 {
-                font-size: 16px;
-                font-weight: 700;
-            }
-
-            #normal-text {
-                font-size: 14px;
-            }
-
-            .padding_ {
-                padding-top: 10px;
-            }
-
-            .container__ {
-                padding: 0px 0px 28px 0px;
-            }
-
-            .container__ img {
-                height: 12px;
-            }
-
-            .webkit {
-                padding: 0!important;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            .header img,
-            #orientation img {
-                height: 32px !important;
-            }
-            
-            #orientation img{
-                height: 16px !important;
-            }
-
-            #brand-image img {
-                height: 24px;
-            }
-
-            .date_ {
-                font-size: 12px!important;
-            }
-            
-            .container {
-                font-size: 16px!important;
-                padding: 12px 24px;
-            }
-
-            .footer {
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-
-            .footer p {
-                font-size: 6px!important;
-            }
-
-            .website {
-                font-size: 12px;
-            }
-
-            footer h4 {
-                font-size: 9px !important;
-            }
-
-            .btn {
-                font-size: 12px;
-            }
-
-            #big-text {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-2 {
-                font-size: 12px;
-                font-weight: 700;
-            }
-
-            #big-text-3 {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-4 {
-                font-size: 16px;
-                font-weight: 700;
-            }
-
-            #normal-text {
-                font-size: 14px;
-            }
-
-            .padding_ {
-                padding-top: 10px;
-            }
-
-            .container__ {
-                padding: 0px 0px 28px 0px;
-            }
-
-            .container__ img {
-                height: 12px;
-            }
-
-            .webkit {
-                padding: 0!important;
-            }
+        p {
+        background-color:#ddd;
+        padding:20px;
+        border:1px solid #ccc;
         }
     </style>
 </head>
 
 <body>
+    <div class="wrap">
+        <h1>Vanilla JavaScript Steganography</h1>
+        <!-- <h5><a target="_blank" href="https://github.com/caleboleary">Caleb O'Leary</a></h5>
+        <h6>Thanks to <a target="_blank" href="https://github.com/steveosoule">Steven Soule</a> for some suggested edits</h6>
+        <h4>From Wikipedia - 'Steganography is the practice of concealing a file, message, image, or video within another file, message, image, or video.'</h4> -->
+        <p>This tool creates a canvas with your image, and an identically sized canvas with your text. It then searches through each pixel of the text canvas, if it sees black, it knows the pixel it's viewing is part of the message. It will find the pixel at the same point in your image canvas, and make sure that the green value of the RGB ends in a 7. If it sees white or transparent, it knows that it's not on the text, and will make sure the identically located pixel on your image canvas's green value does NOT end in 7. After this has been performed on the whole image, we now have an image where every pixel's green value does NOT end in a 7, except where it will spell a message. The decode function reverses this, it looks through the pixels of the uploaded image, and hides any pixel where it doesn't find a green value ending in 7. It's important to note that not all steganography is the same, there are other tools out there that use the alpha chanel, where we're affecting the green channel here. Images encoded with this tool should only be decoded by this tool, etc.</p>
+    
+        <h2>Encode an image with a message</h2>
+        <label>Enter a message to hide within the image:</label><br/>
+        <input type="password" id="message" placeholder="Enter your secret message"></br>
+        <label>Upload an image image:</label><br/>
+        <input type="file" id="imageLoader" name="imageLoader"/>
+        <canvas id="imageCanvas"></canvas>
+        <canvas id="textCanvas"></canvas>
+        <hr>
+        <h2>Decode an image</h2>
+        <label>Upload an image:</label><br/>
+        <input type="file" id="imageLoader2" name="imageLoader2"/>
+        <canvas id="imageCanvas2"></canvas>
+    </div>
 
-    <style type="text/css">
-        @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+    <script>
+        let imageLoader = document.getElementById('imageLoader');
+            imageLoader.addEventListener('change', handleImage, false);
+        let canvas = document.getElementById('imageCanvas');
+        let ctx = canvas.getContext('2d');
+        let messageInput = document.getElementById('message');
 
-        body {
-            Margin: 0;
-            padding: 0;
-            background-color: #f6f9fc;
+        let textCanvas = document.getElementById('textCanvas');
+        let tctx = textCanvas.getContext('2d');
+
+        //handle decoding
+        let decodeCanvas = document.getElementById('imageCanvas2');
+        let dctx = decodeCanvas.getContext('2d');
+        let imageLoader2 = document.getElementById('imageLoader2');
+            imageLoader2.addEventListener('change', handleImage2, false);
+
+        function handleImage(e){
+            console.log("hey")
+            let reader = new FileReader();
+            reader.onload = function(event){
+                let img = new Image();
+                img.onload = function(){
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    textCanvas.width=img.width;
+                    textCanvas.height=img.height;
+                    tctx.font = "30px Arial";
+                    let messageText = (messageInput.value.length) ? messageInput.value : 'Hello';
+                    tctx.fillText(messageText,10,50);
+                    ctx.drawImage(img,0,0);
+                    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    let textData = tctx.getImageData(0, 0, canvas.width, canvas.height);
+                    let pixelsInMsg = 0;
+                        pixelsOutMsg = 0;
+                    for (let i = 0; i < textData.data.length; i += 4) {
+                        if (textData.data[i+3] !== 0) {
+                            if (imgData.data[i+1]%10 == 7) {
+                                //do nothing, we're good
+                            }
+                            else if (imgData.data[i+1] > 247) {
+                                imgData.data[i+1] = 247;
+                            }
+                            else {
+                                while (imgData.data[i+1] % 10 != 7) {
+                                    imgData.data[i+1]++;
+                                }
+                            }
+                            pixelsInMsg++;
+                        }
+                        else {
+                            if (imgData.data[i+1]%10 == 7) {
+                                imgData.data[i+1]--;
+                            }
+                            pixelsOutMsg++;
+                        }
+                    }
+                    console.log('pixels within message borders: '+pixelsInMsg);
+                    console.log('pixels outside of message borders: '+pixelsOutMsg);
+                    ctx.putImageData(imgData, 0, 0);
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(e.target.files[0]);
         }
 
-        table {
-            border-spacing: 0;
+        function handleImage2(e){
+            console.log('handle image 2');
+            let reader2 = new FileReader();
+            reader2.onload = function(event){
+                console.log('reader2 loaded');
+                let img2 = new Image();
+                img2.onload = function(){
+                    console.log('img2 loaded');
+                    decodeCanvas.width = img2.width;
+                    decodeCanvas.height = img2.height;
+                    dctx.drawImage(img2,0,0);
+                    let decodeData = dctx.getImageData(0, 0, decodeCanvas.width, decodeCanvas.height);
+                    for (let i = 0; i < decodeData.data.length; i += 4) {
+                        if (decodeData.data[i+1] % 10 == 7) {
+                            decodeData.data[i] = 0;
+                            decodeData.data[i+1] = 0;
+                            decodeData.data[i+2] = 0;
+                            decodeData.data[i+3] = 255;
+                        }
+                        else {
+                            decodeData.data[i+3] = 0;
+                        }
+                    }
+                    dctx.putImageData(decodeData, 0, 0);
+                };
+                img2.src = event.target.result;
+            };
+            reader2.readAsDataURL(e.target.files[0]);
         }
-
-        td {
-            padding: 0;
-        }
-
-        img {
-            border: 0;
-        }
-
-        .wrapper {
-            width: 100%;
-            table-layout: fixed;
-            background-color: #e7e7e7;
-            padding-bottom: 64px;
-            padding-top: 64px;
-            /* padding-bottom: 20px; */
-        }
-
-        .webkit {
-            max-width: 800px;
-            background-color: #ffffff;
-            padding: 0px 24px 0px;
-        }
-
-        .outer {
-            Margin: 0 auto;
-            width: 100%;
-            max-width: 700px;
-            border-spacing: 0;
-            font-family: 'Century Gothic', 'Futura', 'Didact Gothic', san-serif;
-            color: #4a4a4a;
-        }
-
-        #normal-text {
-            font-size: 16px;
-        }
-
-        #big-text {
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        #big-text-2 {
-            font-size: 20px;
-            font-weight: 700;
-            padding-top: 14px
-        }
-
-        #big-text-3 {
-            font-size: 32px;
-            font-weight: 700;
-            padding-top: 14px
-        }
-
-        #big-text-4 {
-            font-size: 24px;
-            font-weight: 700;
-            padding-top: 14px
-        }
-
-        #brand-image {
-            padding: 0px;
-        }
-
-        #brand-image img {
-            height: 42px;
-        }
-
-        .container {
-            margin: auto;
-            overflow: hidden;
-            font-size: 18px;
-            padding: 28px;
-        }
-
-        .container__ {
-            text-align: center;
-            margin: auto;
-            overflow: hidden;
-            font-size: 18px;
-            padding: 0px 0px 28px 0px;
-            background: #ffffff;
-            background: -moz-linear-gradient(top,  hsl(0,0%,100%) 0%, hsl(0,0%,100%) 100%);
-            background: -webkit-linear-gradient(top,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-            background: linear-gradient(to bottom,  hsl(0,0%,100%) 0%,hsl(0,0%,100%) 100%);
-        }
-
-        .container__ img {
-            height: 12px;
-        }
-
-        .brand {
-            min-height: 80px;
-            border-spacing: 0;
-            margin-bottom: 12px;
-            margin-top: 12px;
-        }
-
-        .header {
-            min-height: 100px;
-            border-spacing: 0;
-            border-radius: 24px;
-            margin-top: 12px;
-            background: #ebebeb;
-        }
-
-        .header2 {
-            min-height: 100px;
-            border-spacing: 0;
-            margin-bottom: 12px!important;
-            border-radius: 24px;
-            margin-top: 12px;
-            background: #ebebeb;
-        }
-
-        .text-red {
-            color: #ff0000;
-        }
-
-        .text-green {
-            color: #1acc03;
-        }
-
-        .text-dark {
-            color: #000000!important;
-        }
-
-        .padding_ {
-            padding-top: 20px;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 14px 36px;
-            display: inline-block;
-            border-radius: 42px;
-            transition: all .2s;
-            margin-top: 32px;
-            background-color: #1acc03;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .header img,
-            #orientation img {
-                height: 32px !important;
-            }
-            
-            #orientation img{
-                height: 16px !important;
-            }
-
-            #brand-image img {
-                height: 24px;
-            }
-
-            .date_ {
-                font-size: 12px!important;
-            }
-            
-            .container {
-                font-size: 16px!important;
-                padding: 12px 24px;
-            }
-
-            .footer {
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-
-            .footer p {
-                font-size: 6px!important;
-            }
-
-            .website {
-                font-size: 12px;
-            }
-
-            footer h4 {
-                font-size: 9px !important;
-            }
-
-            .btn {
-                font-size: 12px;
-            }
-
-            #big-text {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-2 {
-                font-size: 14px;
-                font-weight: 700;
-            }
-
-            #big-text-3 {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-4 {
-                font-size: 16px;
-                font-weight: 700;
-            }
-
-            #normal-text {
-                font-size: 14px;
-            }
-
-            .padding_ {
-                padding-top: 10px;
-            }
-
-            .container__ {
-                padding: 0px 0px 28px 0px;
-            }
-
-            .container__ img {
-                height: 12px;
-            }
-
-            .webkit {
-                padding: 0!important;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            .header img,
-            #orientation img {
-                height: 32px !important;
-            }
-            
-            #orientation img{
-                height: 16px !important;
-            }
-
-            #brand-image img {
-                height: 24px;
-            }
-
-            .date_ {
-                font-size: 12px!important;
-            }
-            
-            .container {
-                font-size: 16px!important;
-                padding: 12px 24px;
-            }
-
-            .footer {
-                padding-top: 0px;
-                padding-bottom: 0px;
-            }
-
-            .footer p {
-                font-size: 6px!important;
-            }
-
-            .website {
-                font-size: 12px;
-            }
-
-            footer h4 {
-                font-size: 9px !important;
-            }
-
-            .btn {
-                font-size: 12px;
-            }
-
-            #big-text {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-2 {
-                font-size: 12px;
-                font-weight: 700;
-            }
-
-            #big-text-3 {
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            #big-text-4 {
-                font-size: 16px;
-                font-weight: 700;
-            }
-
-            #normal-text {
-                font-size: 14px;
-            }
-
-            .padding_ {
-                padding-top: 10px;
-            }
-
-            .container__ {
-                padding: 0px 0px 28px 0px;
-            }
-
-            .container__ img {
-                height: 12px;
-            }
-
-            .webkit {
-                padding: 0!important;
-            }
-        }
-    </style>
-
-    <center class="wrapper">
-        <div class="webkit">
-            <table class="outer" align="center">
-                <tr>
-                    <td>
-                        <table width="100%" class="brand">
-                            <tr>
-                                <td>
-                                    <table width="100%" style="text-align: center;">
-                                        <tr>
-                                            <div style="width: 100%;text-align: center;">
-                                                <div id="brand-image">
-                                                    <img style="margin: 4px 0 0 0;" src="https://scontent.flos5-1.fna.fbcdn.net/v/t1.6435-9/175528633_4399552466740219_4442017189912054025_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHNJNNz44qk_XqtiHwZjIxidPZCQamBeNR09kJBqYF41BfNLxXzaXutCk9OH2hkldxnBcqlNxhSgT1VkeYdOxum&_nc_ohc=7ykmLezO3aYAX-eHPal&_nc_ht=scontent.flos5-1.fna&oh=d77947d38bf8afcad60816ea682e8d2d&oe=60A275C3" />
-                                                </div>
-                                            </div>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table width="100%" class="container header2">
-                            <tr>
-                                <td>
-                                    <table width="100%" style="text-align: center;">
-                                        <tr>
-                                            <td width="100%" id="big-text-4" class="text-dark" style="margin-bottom: 12px;">Your Transcript Request has been updated</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" id="big-text-2" style="padding-top: 24px;" class="text-green">Hi Juliet,</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" id="normal-text" class="text-dark" style="padding-top: 24px;">
-                                                <div>
-                                                    We have updated your Transcript Request with ID <b>#00000001</b>. We will let you know once we start processing.
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" id="normal-text" class="text-dark" style="padding-top: 24px;">
-                                                <div>
-                                                    Kindly note that you cannot make any more updates once we commence processing.
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" id="normal-text" class="text-dark" style="padding-top: 24px;">
-                                                <div>
-                                                    Log on to your account to track the progress of your requests. <br><br>Thank You.
-                                                </div>
-                                                <a href="#" class="btn">Login</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table width="100%" class="container">
-                            <tr>
-                                <td>
-                                    <table width="100%" style="text-align: center;">
-                                        <tr>
-                                            <td width="100%" id="normal-text" class="text-red">
-                                                <div>
-                                                    If you did not make this request, then please ignore this email.
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="text-dark" style="padding-top: 24px;">
-                                                <hr>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td style="text-align: center;">
-                        <img src="../assets/seamfix.png" alt="Banner" style="max-width: 100%;">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table width="80%" style="border-spacing: 0; margin: auto;">
-                            <tr>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/facebook.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/twitter.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/link.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/linkedin.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/youtube.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/instagram.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/soundcloud.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                                <td style="padding-top: 20px;">
-                                    <footer
-                                        style="background: #fff;color: #0e237e;padding-top: 10px;">
-                                        <div class="container__" style="margin: auto;overflow: hidden;">
-                                            <a href="#">
-                                                <img src="../assets/facebook.png" />
-                                            </a>
-                                        </div>
-                                    </footer>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </center>
+    </script>
+    
 </body>
 
 </html>
